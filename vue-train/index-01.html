@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in listFilter">
+                {{item.fruit}}
+            </li>
+        </ul>
+    </div>
+    <script>
+     var vm=new Vue({
+         el:"#app",
+         data:{
+             list:[
+                 {
+                    fruit:'苹果',
+                    isShow:true
+                 },{
+                    fruit:'橘子',
+                    isShow:true
+                 },{
+                    fruit:'李子',
+                    isShow:false
+                 },{
+                    fruit:"梨",
+                    isShow:true
+                 }
+             ]
+         },
+         computed:{
+             listFilter:function(){
+                const newList=[];
+                this.list.forEach(item=>{
+                    if(item.isShow){
+                        newList.push(item);
+                    }
+                })
+                return newList;
+             }
+         }
+     })
+    </script>
+</body>
+</html>

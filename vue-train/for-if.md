@@ -9,3 +9,33 @@
 > 用计算属性（computed）过滤一遍数据，再用 v-for 循环
 #### 情况二 v-if 在 v-for 之前
 > 把 v-if 提取放到 v-for 父级标签上。
+
+
+## 补充
+```js
+// 优先级判断 v-for 优先 v-if
+// 所在源码位置 compiler/codegen/index.js
+if (el.staticRoot && !el.staticProcessed) {
+    return genStatic(el, state)
+} else if (el.once && !el.onceProcessed) {
+    return genOnce(el, state)
+} else if (el.for && !el.forProcessed) {
+    return genFor(el, state)
+} else if (el.if && !el.ifProcessed) {
+    return genIf(el, state)
+} else if (el.tag === 'template' && !el.slotTarget && !state.pre) {
+    return genChildren(el, state) || 'void 0'
+} else if (el.tag === 'slot') {
+    return genSlot(el, state)
+} else {
+    //...
+}
+
+// 在下面代码中可以看到
+// 每次的渲染都会先执行循环再执行判断条件，造成性能的浪费
+// console.log(vm.$options.render);
+(function anonymous(
+) {
+    with(this){return _c('div',{attrs:{"id":"app"}},[_c('ul',_l((listFilter),function(item){return (isShow)?_c('li',[_v("\n                "+_s(item.fruit)+"\n            ")]):_e()}),0)])}
+})
+```

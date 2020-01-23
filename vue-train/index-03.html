@@ -21,7 +21,9 @@
                 arrData:[1,2,3,4]
             },
             mounted () {
-                
+                setTimeout(()=>{
+                    this.arrData.splice(2,0,6);
+                },2000)
             }
         });
     </script>

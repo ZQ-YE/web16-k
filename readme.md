@@ -1,16 +1,16 @@
-# vue-typescript
+# typescript
 
 ## 项目设置
 ```
 npm install
 ```
 
-### 编译和热重新加载以进行开发
+### 本地启动
 ```
 npm run serve
 ```
 
-### 编译和热重新加载以生产
+### 打包生产服
 ```
 npm run build
 ```
@@ -22,9 +22,3 @@ npm run lint
 
 ### 自定义配置
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-# vue + typescript
-```
-vue add @vue/typescript
-```

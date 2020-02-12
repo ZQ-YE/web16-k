@@ -1,16 +1,16 @@
-# study-vue
+# vue-typescript
 
-## Project setup
+## 项目设置
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译和热重新加载以进行开发
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译和热重新加载以生产
 ```
 npm run build
 ```
@@ -20,5 +20,11 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
+### 自定义配置
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+# vue + typescript
+```
+vue add @vue/typescript
+```

@@ -1,0 +1,19 @@
+{
+  "name": "yeee",
+  "version": "1.0.0",
+  "description": "> TypeScript 是 JavaScript 的一个超集，支持 ECMAScript 6 标准。\r > TypeScript 设计目标是开发大型应用，它可以编译成纯 JavaScript，编译出来的 JavaScript 可以运行在任何浏览器上。",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config ./build/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZQ-YE/web16-k.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZQ-YE/web16-k/issues"
+  },
+  "homepage": "https://github.com/ZQ-YE/web16-k#readme"
+}
